@@ -1,0 +1,130 @@
+<h2>Turtle Krawl Order</h2>
+<form [formGroup]="this.ordersService.form">
+  
+
+  <input placeholder="Order Date" 
+         formControlName="orderDate" 
+         type="date" 
+         class="input-field col-sm-r8"><br>
+  <input placeholder="Order Number" 
+         formControlName="orderNumber" 
+         type="text"
+         class="input-field col-sm-r8"><br>
+  <input placeholder="Customer Email" 
+         formControlName="customerEmail" 
+         type="text" 
+         class="input-field col-sm-r8"><br>
+  
+  <h4>Shirt Selection</h4>
+  <div class="field">
+    <label for="youthM">Youth-Medium</label> 
+    <input placeholder="qty"
+          formControlName="youthM"
+          type="number"
+          class="input-field col-sm-r8"><br>
+    <h5>For Her</h5>
+    <label for="herXS">Hers-XSmall</label>
+    <input placeholder="qty"
+           formControlName="herXS"
+           type="number"
+           class="sm-col-1">
+    <label for="herS">Hers-Small</label>
+    <input placeholder="qty"
+          formControlName="herS"
+          type="number"
+          class="sm-col-1"><br>
+    <label for="herM">Hers-Medium</label>
+    <input placeholder="qty"
+            formControlName="herM"
+            type="number"
+            class="sm-col-1">
+    <label for="herL">Hers-Large</label>
+    <input placeholder="qty"
+          formControlName="herL"
+          type="number"
+          class="sm-col-1"><br>
+    <label for="herXL">Hers-XLarge</label>
+    <input placeholder="qty"
+          formControlName="herXL"
+          type="number"
+          class="sm-col-1"><br>
+    <h5>For Him</h5>
+    <label for="hisXS">His-XSmall</label>
+    <input placeholder="qty"
+            formControlName="hisXS"
+            type="number"
+            class="sm-col-1">
+    <label for="hisS">His-Small</label>
+    <input placeholder="qty"
+          formControlName="hisS"
+          type="number"
+          class="sm-col-1"><br>
+    <label for="hisM">His-Medium</label>
+    <input placeholder="qty"
+            formControlName="hisM"
+            type="number"
+            class="sm-col-1">
+    <label for="hisL">His-Large</label>
+    <input placeholder="qty"
+          formControlName="hisL"
+          type="number"
+          class="sm-col-1"><br>
+    <label for="hisXL">His-XLarge</label>
+    <input placeholder="qty"
+          formControlName="hisXL"
+          type="number"
+          class="sm-col-1"> 
+    <label for="hisXXL">His-XXLarge</label>
+    <input placeholder="qty"
+          formControlName="hisXXL"
+          type="number"
+          class="sm-col-1"><br>       
+  </div>
+  <!-- <button class="btn btn-default" 
+         *ngFor="let shirt of shirts" 
+         (click)="addShirt(shirt)">
+         {{shirt}}
+  </button> -->
+  <!-- <ul class="collection">
+     <li *ngFor="let shirt of shirtOrder">
+         <span class="col-2"> {{ shirt }} </span>
+         <a class="col-1" (click)="removeShirt(shirt)">x</a>
+     </li>
+  </ul> -->
+  <h5>Other Donation Options</h5>
+  <div class="field">
+    <label for="adoptHatchling">Adopt a Hatchling for $15 </label> 
+  
+    <input placeholder="quantity"
+          formControlName="adoptHatchling"
+          type="number"
+          class="input-field col-sm-1">
+  </div>
+  <div class="field">
+    <label for="adoptNest">Adopt a Nest for $45 </label>
+  
+    <input placeholder="quantity"
+          formControlName="adoptNest"
+          type="number"
+          class="input-field col-sm-1">
+  </div>
+  <div class="field-light">
+    <label for="generalDonation">Other Donation</label>
+    <button class="btn btn-default" 
+         *ngFor="let donation of donations" 
+         (click)="addDonation(donation)">
+         {{donation}}
+  </button>
+    <!-- <input placeholder="General Donation"
+          formControlName="generalDonation"
+          type="button"
+          class="input-field col-sm-4">     -->
+  </div>
+  <button class="btn btn-default" >
+    Review Cart
+  </button>
+  <button type="submit" class="btn btn-success input-sm" 
+  [disabled]="!this.ordersService.form.valid">Review
+</button>
+</form>
+

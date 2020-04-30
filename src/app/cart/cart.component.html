@@ -1,0 +1,56 @@
+<p>cart works!</p>
+<main>
+  <div class="jumbotron"> 
+    <div class="container">
+      <!-- <div [hidden]="submitted"> -->
+        <h3>You submitted the following:</h3>
+        <div class="row">
+          <div class="col-xs-1">Order Number</div>
+          <div class="col-xs-1">{{ this.ordersService.form.value.orderNumber }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-2">Customer Email</div>
+          <div class="col-xs-2">{{ ": " + this.ordersService.form.value.customerEmail }}</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">Shirt(s) Selected</div>
+          
+
+        </div>
+        <!-- <div class ="row">
+          <div class="col-xs-2">Youth Medium</div>
+          <div class="col-xs-1">{{ ": " + this.ordersService.form.value.youthM }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-2">Hers Medium</div>
+          <div class="col-xs-1">{{ ": " + this.ordersService.form.value.herM }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-2">His Medium</div>
+          <div class="col-xs-1">{{ ": " + this.ordersService.form.value.hisM }}</div>
+        </div> -->
+          <!-- <div class="col-xs-9">{{ " " + model.city + ", " + model.state +
+            " " + model.zip }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-3">Shirt Info</div>
+          <div class="col-xs-9">{{ ": " + model.shirttype + ", " + model.shirtsize }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-3">Contact Info</div>
+          <div class="col-xs-9">{{ ": " + model.phone + ", " + model.email }}</div>
+        </div> -->
+
+        <br>
+        <!-- <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+        <button class="btn btn-success" (click)="newAcct(); acctForm.reset()">Save</button>
+      </div> -->
+    </div> 
+   </div>
+  <script>
+  
+  console.log(`hisM ${this.ordersService.form.value.hisM}`);
+
+  </script>
+</main>
+
